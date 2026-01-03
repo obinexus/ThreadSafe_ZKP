@@ -1,0 +1,18 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+
+/**
+
+//policy_rule : token_state ARROW token_state
+//token_state : IDENTIFIER
+
+*/
+  <rect x="50" y="50" width="100" height="60" fill="lightblue" stroke="blue" stroke-width="2"/>
+  <text x="100" y="80" text-anchor="middle">Token A</text>
+  
+  <rect x="250" y="50" width="100" height="60" fill="lightgreen" stroke="green" stroke-width="2"/>
+  <text x="300" y="80" text-anchor="middle">Token B</text>
+  
+  <path d="M 150 80 L 250 80" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="70" text-anchor="middle">Policy Rule 1</text>
+</svg>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+  <title>Event Sourcing Pattern with Rift Governance</title>
+  
+  <defs>
+    <marker id="eventArrow" markerWidth="10" markerHeight="10" 
+            refX="9" refY="3" orient="auto">
+      <polygon points="0,0 9,3 0,6" fill="#4caf50"/>
+    </marker>
+    <marker id="commandArrow" markerWidth="10" markerHeight="10" 
+            refX="9" refY="3" orient="auto">
+      <polygon points="0,0 9,3 0,6" fill="#2196f3"/>
+    </marker>
+    <marker id="governanceArrow" markerWidth="10" markerHeight="10" 
+            refX="9" refY="3" orient="auto">
+      <polygon points="0,0 9,3 0,6" fill="#ff9800"/>
+    </marker>
+    
+    <!-- Gradients -->
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="eventStoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial" 
+        font-size="24" font-weight="bold" fill="#1a237e">
+    Event Sourcing Pattern with Rift Governance
+  </text>
+  
+  <!-- Application Layer -->
+  <g id="applicationLayer">
+    <rect x="100" y="80" width="400" height="150" fill="url(#appGrad)" 
+          stroke="#1976d2" stroke-width="3" rx="5"/>
+    <text x="300" y="100" text-anchor="middle" font-family="Arial" 
+          font-size="18" font-weight="bold" fill="#0d47a1">
+      Application
+    </text>
+    
+    <!-- Store Operations -->
+    <rect x="130" y="130" width="170" height="40" fill="#ffffff" 
+          stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="215" y="155" text-anchor="middle" font-family="Arial" 
+          font-size="14" fill="#1976d2">
+      Store Operations
+    </text>
+    
+    <!-- Commands -->
+    <rect x="310" y="130" width="170" height="40" fill="#ffffff" 
+          stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="395" y="155" text-anchor="middle" font-family="Arial" 
+          font-size="14" fill="#1976d2">
+      Commands
+    </text>
+    
+    <!-- Arrow from Commands to Event Store -->
+    <path d="M 395 170 L 395 250" stroke="#2196f3" stroke-width="2" 
+          marker-end="url(#commandArrow)"/>
+    <text x="420" y="210" font-family="Arial" font-size="12" fill="#2196f3">
+      Process Command
+    </text>
+  </g>
+  
+  <!-- Event Store -->
+  <g id="eventStore">
+    <rect x="300" y="250" width="400" height="150" fill="url(#eventStoreGrad)" 
+          stroke="#4caf50" stroke-width="3" rx="5"/>
+    <text x="500" y="270" text-anchor="middle" font-family="Arial" 
+          font-size="18" font-weight="bold" fill="#2e7d32">
+      Event Store
+    </text>
+    
+    <!-- Append-only storage -->
+    <rect x="330" y="300" width="340" height="40" fill="#ffffff" 
+          stroke="#4caf50" stroke-width="2" rx="3"/>
+    <text x="500" y="325" text-anchor="middle" font-family="Arial" 
+          font-size="14" fill="#388e3c">
+      Append-only Event Stream
+    </text>
+    
+    <!-- Arrows for event flow -->
+    <path d="M 500 350 L 500 430" stroke="#4caf50" stroke-width="2" 
+          marker-end="url(#eventArrow)"/>
+    <text x="530" y="390" font-family="Arial" font-size="12" fill="#4caf50">
+      Consume Events
+    </text>
+  </g>
+  
+  <!-- Current State DB -->
+  <g id="currentState">
+    <rect x="100" y="430" width="400" height="150" fill="#fff3e0" 
+          stroke="#ff9800" stroke-width="3" rx="5"/>
+    <text x="300" y="450" text-anchor="middle" font-family="Arial" 
+          font-size="18" font-weight="bold" fill="#f57c00">
+      Current State
+    </text>
+    
+    <!-- State DB -->
+    <rect x="130" y="480" width="340" height="40" fill="#ffffff" 
+          stroke="#ff9800" stroke-width="2" rx="3"/>
+    <text x="300" y="505" text-anchor="middle" font-family="Arial" 
+          font-size="14" fill="#ff9800">
+      Point-in-Time State Database
+    </text>
+  </g>
+  
+  <!-- Governance Layer -->
+  <g id="governanceLayer">
+    <rect x="600" y="430" width="500" height="400" fill="#f3e5f5" 
+          stroke="#9c27b0" stroke-width="3" rx="5"/>
+    <text x="850" y="450" text-anchor="middle" font-family="Arial" 
+          font-size="18" font-weight="bold" fill="#7b1fa2">
+      Rift Governance Layer
+    </text>
+    
+    <!-- Governance components -->
+    <g id="governanceComponents">
+      <!-- Observe -->
+      <circle cx="650" cy="500" r="40" fill="#e3f2fd" stroke="#1976d2" 
+              stroke-width="2"/>
+      <text x="650" y="500" text-anchor="middle" font-family="Arial" 
+            font-size="12" font-weight="bold" fill="#0d47a1">
+        Observe
+      </text>
+      
+      <!-- Verify -->
+      <circle cx="750" cy="500" r="40" fill="#e8f5e9" stroke="#4caf50" 
+              stroke-width="2"/>
+      <text x="750" y="500" text-anchor="middle" font-family="Arial" 
+            font-size="12" font-weight="bold" fill="#2e7d32">
+        Verify
+      </text>
+      
+      <!-- Govern -->
+      <circle cx="850" cy="500" r="40" fill="#fff3e0" stroke="#ff9800" 
+              stroke-width="2"/>
+      <text x="850" y="500" text-anchor="middle" font-family="Arial" 
+            font-size="12" font-weight="bold" fill="#f57c00">
+        Govern
+      </text>
+      
+      <!-- Evolve -->
+      <circle cx="950" cy="500" r="40" fill="#f3e5f5" stroke="#9c27b0" 
+              stroke-width="2"/>
+      <text x="950" y="500" text-anchor="middle" font-family="Arial" 
+            font-size="12" font-weight="bold" fill="#7b1fa2">
+        Evolve
+      </text>
+      
+      <!-- Arrows between governance steps -->
+      <path d="M 690 500 L 710 500" stroke="#666" stroke-width="2" 
+            marker-end="url(#governanceArrow)"/>
+      <path d="M 790 500 L 810 500" stroke="#666" stroke-width="2" 
+            marker-end="url(#governanceArrow)"/>
+      <path d="M 890 500 L 910 500" stroke="#666" stroke-width="2" 
+            marker-end="url(#governanceArrow)"/>
+      
+      <!-- Feedback loop -->
+      <path d="M 950 540 Q 1000 600 650 600 Q 600 550 650 540" 
+            stroke="#ff9800" stroke-width="2" stroke-dasharray="5,3" 
+            fill="none" marker-end="url(#governanceArrow)"/>
+      <text x="800" y="620" text-anchor="middle" font-family="Arial" 
+            font-size="11" fill="#ff9800">
+        Adaptive Feedback
+      </text>
+    </g>
+    
+    <!-- HITL Recovery -->
+    <rect x="700" y="650" width="200" height="60" fill="#ffebee" 
+          stroke="#f44336" stroke-width="2" rx="3"/>
+    <text x="800" y="680" text-anchor="middle" font-family="Arial" 
+          font-size="14" font-weight="bold" fill="#d32f2f">
+      HITL Recovery
+    </text>
+    <text x="800" y="700" text-anchor="middle" font-family="Arial" 
+          font-size="10" fill="#c62828">
+      Human-in-the-Loop
+    </text>
+    
+    <!-- Geometric Proofs -->
+    <rect x="700" y="720" width="200" height="60" fill="#e0f7fa" 
+          stroke="#00bcd4" stroke-width="2" rx="3"/>
+    <text x="800" y="750" text-anchor="middle" font-family="Arial" 
+          font-size="14" font-weight="bold" fill="#00838f">
+      Geometric Proofs
+    </text>
+    <text x="800" y="770" text-anchor="middle" font-family="Arial" 
+          font-size="10" fill="#006064">
+      Mathematical Verification
+    </text>
+  </g>
+  
+  <!-- Connections between layers -->
+  <g id="connections">
+    <!-- From Event Store to Current State -->
+    <path d="M 500 350 L 300 430" stroke="#4caf50" stroke-width="2" 
+          stroke-dasharray="5,5" fill="none" marker-end="url(#eventArrow)"/>
+    <text x="400" y="400" text-anchor="middle" font-family="Arial" 
+          font-size="11" fill="#4caf50">
+      Replay Events
+    </text>
+    
+    <!-- From Current State to Governance -->
+    <path d="M 500 550 L 650 650" stroke="#ff9800" stroke-width="2" 
+          fill="none" marker-end="url(#governanceArrow)"/>
+    <text x="580" y="620" text-anchor="middle" font-family="Arial" 
+          font-size="11" fill="#ff9800">
+      Governance Check
+    </text>
+    
+    <!-- From Governance to Application -->
+    <path d="M 650 550 Q 400 600 300 230" stroke="#9c27b0" stroke-width="2" 
+          stroke-dasharray="5,3" fill="none" marker-end="url(#governanceArrow)"/>
+    <text x="450" y="550" text-anchor="middle" font-family="Arial" 
+          font-size="11" fill="#9c27b0">
+      Policy Enforcement
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="50" y="700" width="200" height="150" fill="white" 
+          stroke="#ccc" stroke-width="1" rx="3"/>
+    <text x="150" y="720" text-anchor="middle" font-family="Arial" 
+          font-size="12" font-weight="bold" fill="#333">Legend</text>
+    
+    <line x1="70" y1="740" x2="90" y2="740" stroke="#2196f3" stroke-width="2"/>
+    <text x="110" y="745" font-family="Arial" font-size="10" fill="#333">
+      Command Flow
+    </text>
+    
+    <line x1="70" y1="760" x2="90" y2="760" stroke="#4caf50" stroke-width="2"/>
+    <text x="110" y="765" font-family="Arial" font-size="10" fill="#333">
+      Event Flow
+    </text>
+    
+    <line x1="70" y1="780" x2="90" y2="780" stroke="#9c27b0" stroke-width="2"/>
+    <text x="110" y="785" font-family="Arial" font-size="10" fill="#333">
+      Governance Flow
+    </text>
+    
+    <line x1="70" y1="800" x2="90" y2="800" stroke="#ff9800" stroke-width="2" 
+          stroke-dasharray="5,3"/>
+    <text x="110" y="805" font-family="Arial" font-size="10" fill="#333">
+      Recovery Path
+    </text>
+    
+    <rect x="70" y="815" width="20" height="20" fill="#f3e5f5" 
+          stroke="#9c27b0" stroke-width="1"/>
+    <text x="110" y="830" font-family="Arial" font-size="10" fill="#333">
+      Governance Component
+    </text>
+  </g>
+</svg>
