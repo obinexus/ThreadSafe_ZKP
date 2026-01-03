@@ -6,85 +6,85 @@ ThreadSafe_ZKP is a research and implementation framework that integrates **zero
 
 ---
 
-## ?? Overview
+## ğŸš€ Overview
 
 ThreadSafe_ZKP bridges three critical domains:
 
-1. **Zero-Knowledge Proofs** - Privacy-preserving authentication without exposing secrets
-2. **Thread-Safe Concurrency** - Data-oriented parallel processing with formal safety guarantees
-3. **Quantum-Resistant Identity** - Lattice-based cryptographic systems resistant to quantum attacks
+1. **Zero-Knowledge Proofs** â€“ Privacy-preserving authentication without exposing secrets
+2. **Thread-Safe Concurrency** â€“ Data-oriented parallel processing with formal safety guarantees
+3. **Quantum-Resistant Identity** â€“ Lattice-based cryptographic systems resistant to quantum attacks
 
 The framework is built around the **Gosilang polyglot runtime** and the **Rift governance model**, enabling systems that are both mathematically verifiable and practically deployable.
 
 ---
 
-## ?? Repository Structure
+## ğŸ“ Repository Structure
 
 ```
 ThreadSafe_ZKP/
-ÃÄÄ .mrift/                          # Rift policy definitions & formal proofs
-³   ÃÄÄ Th/                          # Coq formalizations
-³   ³   ÃÄÄ EventSourcing.coq
-³   ³   ÃÄÄ policies.coq
-³   ³   ÀÄÄ Rift Governance System.coq
-³   ÃÄÄ polices.mrift                # Rift policy language definitions
-³   ÀÄÄ Thread Safety Implementation in Gosilang - A Formal Analysis.pdf
-ÃÄÄ diagrams/                        # Architecture & governance diagrams
-³   ÃÄÄ EventSourcingComplete_03JAN2026.svg
-³   ÃÄÄ RIFT Governance Model Diagram.svg
-³   ÃÄÄ Diagram ASCII of RIFT Token Flow.md
-³   ÀÄÄ PolicyRule1.xml
-ÃÄÄ docs/                            # Technical documentation
-³   ÀÄÄ ThreadSafe_ZKP/
-³       ÃÄÄ Password Rotation and CRUD-Based Auth.md
-³       ÃÄÄ Phantom Encoder- A Design Pattern for ZKP.md
-³       ÃÄÄ ThreadProof - A Non-Isomorphic Lattice-Based Post-Quatum.md
-³       ÀÄÄ ZERO_KNOWLEDGE_PROOF.md
-ÀÄÄ gosilang/                        # Gosilang implementation examples
-    ÃÄÄ BankAccountActor.gs          # Event-sourced banking example
-    ÃÄÄ DataStore.gs                 # Thread-safe data store
-    ÃÄÄ EventSouring.gs              # Event sourcing core
-    ÃÄÄ EventSouringGoverance.gs     # Governance-integrated event sourcing
-    ÃÄÄ GovernanceMetrics.gs         # Metrics and analytics
-    ÃÄÄ GovernedEventStore.gs        # Governance-aware event store
-    ÃÄÄ GovernedProjection.gs        # Eventually consistent projections
-    ÃÄÄ HTTPServer.gs                # Thread-safe HTTP server
-    ÃÄÄ ParallelDataProcessor.gs     # Data-oriented parallel processing
-    ÃÄÄ PatternSelectionFramework.gs # Decision framework
-    ÃÄÄ polices.gs                   # Rift policy implementation
-    ÃÄÄ PolicyRules.gs               # Policy rule definitions
-    ÃÄÄ RiftGovernanceSystem.gs      # Core governance system
-    ÃÄÄ ThreadSafeCounter.gs         # Basic thread-safe counter
-    ÀÄÄ Tomographic.bnf              # Formal grammar for state model
+â”œâ”€â”€ .mrift/                          # Rift policy definitions & formal proofs
+â”‚   â”œâ”€â”€ Th/                          # Coq formalizations
+â”‚   â”‚   â”œâ”€â”€ EventSourcing.coq
+â”‚   â”‚   â”œâ”€â”€ policies.coq
+â”‚   â”‚   â””â”€â”€ Rift Governance System.coq
+â”‚   â”œâ”€â”€ polices.mrift                # Rift policy language definitions
+â”‚   â””â”€â”€ Thread Safety Implementation in Gosilang - A Formal Analysis.pdf
+â”œâ”€â”€ diagrams/                        # Architecture & governance diagrams
+â”‚   â”œâ”€â”€ EventSourcingComplete_03JAN2026.svg
+â”‚   â”œâ”€â”€ RIFT Governance Model Diagram.svg
+â”‚   â”œâ”€â”€ Diagram ASCII of RIFT Token Flow.md
+â”‚   â””â”€â”€ PolicyRule1.xml
+â”œâ”€â”€ docs/                            # Technical documentation
+â”‚   â””â”€â”€ ThreadSafe_ZKP/
+â”‚       â”œâ”€â”€ Password Rotation and CRUD-Based Auth.md
+â”‚       â”œâ”€â”€ Phantom Encoder- A Design Pattern for ZKP.md
+â”‚       â”œâ”€â”€ ThreadProof - A Non-Isomorphic Lattice-Based Post-Quatum.md
+â”‚       â””â”€â”€ ZERO_KNOWLEDGE_PROOF.md
+â””â”€â”€ gosilang/                        # Gosilang implementation examples
+    â”œâ”€â”€ BankAccountActor.gs          # Event-sourced banking example
+    â”œâ”€â”€ DataStore.gs                 # Thread-safe data store
+    â”œâ”€â”€ EventSouring.gs              # Event sourcing core
+    â”œâ”€â”€ EventSouringGoverance.gs     # Governance-integrated event sourcing
+    â”œâ”€â”€ GovernanceMetrics.gs         # Metrics and analytics
+    â”œâ”€â”€ GovernedEventStore.gs        # Governance-aware event store
+    â”œâ”€â”€ GovernedProjection.gs        # Eventually consistent projections
+    â”œâ”€â”€ HTTPServer.gs                # Thread-safe HTTP server
+    â”œâ”€â”€ ParallelDataProcessor.gs     # Data-oriented parallel processing
+    â”œâ”€â”€ PatternSelectionFramework.gs # Decision framework
+    â”œâ”€â”€ polices.gs                   # Rift policy implementation
+    â”œâ”€â”€ PolicyRules.gs               # Policy rule definitions
+    â”œâ”€â”€ RiftGovernanceSystem.gs      # Core governance system
+    â”œâ”€â”€ ThreadSafeCounter.gs         # Basic thread-safe counter
+    â””â”€â”€ Tomographic.bnf              # Formal grammar for state model
 ```
 
 ---
 
-## ? Key Features
+## âœ¨ Key Features
 
-### ?? Zero-Knowledge Proofs
-- **Phantom Encoder Pattern** - True zero-knowledge authentication without secret exposure
-- **ThreadProof Protocol** - Non-isomorphic lattice-based post-quantum identity proofs
-- **Quantum-Resistant Hashes** - SHA-512 with large output sizes for quantum resistance
+### ğŸ” Zero-Knowledge Proofs
+- **Phantom Encoder Pattern** â€“ True zero-knowledge authentication without secret exposure
+- **ThreadProof Protocol** â€“ Non-isomorphic lattice-based post-quantum identity proofs
+- **Quantum-Resistant Hashes** â€“ SHA-512 with large output sizes for quantum resistance
 
-### ?? Thread-Safe Concurrency
-- **Data-Oriented Parallel Processing** - Lock-free operations with geometric proofs
-- **Formal Safety Guarantees** - Mathematically proven thread safety properties
-- **HTTP Interface Safety** - Isolated request processing with race condition prevention
+### ğŸ§µ Thread-Safe Concurrency
+- **Data-Oriented Parallel Processing** â€“ Lock-free operations with geometric proofs
+- **Formal Safety Guarantees** â€“ Mathematically proven thread safety properties
+- **HTTP Interface Safety** â€“ Isolated request processing with race condition prevention
 
-### ??? Rift Governance Model
-- **Implicit  Explicit Policies** - Governance that emerges from system usage
-- **Human-in-the-Loop (HITL) Recovery** - Adaptive recovery with human oversight
-- **Geometric Proof Verification** - Mathematical verification of system integrity
+### ğŸ›ï¸ Rift Governance Model
+- **Implicit â†’ Explicit Policies** â€“ Governance that emerges from system usage
+- **Human-in-the-Loop (HITL) Recovery** â€“ Adaptive recovery with human oversight
+- **Geometric Proof Verification** â€“ Mathematical verification of system integrity
 
-### ?? Event Sourcing Integration
-- **Governed Event Stores** - Append-only event streams with governance policies
-- **Point-in-Time Queries** - Temporal state reconstruction with audit trails
-- **Projection Systems** - Eventually consistent read models with verification
+### ğŸŒ Event Sourcing Integration
+- **Governed Event Stores** â€“ Append-only event streams with governance policies
+- **Point-in-Time Queries** â€“ Temporal state reconstruction with audit trails
+- **Projection Systems** â€“ Eventually consistent read models with verification
 
 ---
 
-## ?? Getting Started
+## ğŸš€ Getting Started
 
 ### Prerequisites
 - **C Compiler** (GCC/Clang) for Gosilang runtime
@@ -113,7 +113,7 @@ coqc EventSourcing.coq
 
 ---
 
-## ?? Documentation
+## ğŸ“š Documentation
 
 | Document | Description |
 |----------|-------------|
@@ -123,29 +123,29 @@ coqc EventSourcing.coq
 | [Password Rotation and CRUD-Based Auth.md](docs/ThreadSafe_ZKP/Password%20Rotation%20and%20CRUD-Based%20Auth.md) | CRUD-based password lifecycle management |
 
 ### Diagrams
-- **[RIFT Governance Model Diagram.svg](diagrams/RIFT%20Governance%20Model%20Diagram.svg)** - Complete governance architecture
-- **[EventSourcingComplete_03JAN2026.svg](diagrams/EventSourcingComplete_03JAN2026.svg)** - Event sourcing with governance integration
-- **[Diagram ASCII of RIFT Token Flow.md](diagrams/Diagram%20ASCII%20of%20RIFT%20Token%20Flow.md)** - Textual representation of token flow
+- **[RIFT Governance Model Diagram.svg](diagrams/RIFT%20Governance%20Model%20Diagram.svg)** â€“ Complete governance architecture
+- **[EventSourcingComplete_03JAN2026.svg](diagrams/EventSourcingComplete_03JAN2026.svg)** â€“ Event sourcing with governance integration
+- **[Diagram ASCII of RIFT Token Flow.md](diagrams/Diagram%20ASCII%20of%20RIFT%20Token%20Flow.md)** â€“ Textual representation of token flow
 
 ---
 
-## ??? Architecture
+## ğŸ—ï¸ Architecture
 
 ### Core Components
-1. **Gosilang Runtime** - Polyglot execution environment for thread-safe operations
-2. **Rift Governance Engine** - Policy enforcement and evolution system
-3. **Zero-Knowledge Proof Library** - Cryptographic primitives for privacy preservation
-4. **Event Sourcing Framework** - Immutable event storage with governance
+1. **Gosilang Runtime** â€“ Polyglot execution environment for thread-safe operations
+2. **Rift Governance Engine** â€“ Policy enforcement and evolution system
+3. **Zero-Knowledge Proof Library** â€“ Cryptographic primitives for privacy preservation
+4. **Event Sourcing Framework** â€“ Immutable event storage with governance
 
 ### Design Principles
-- **Never Trust, Always Verify** - Implicit governance through continuous verification
-- **Geometric Proofs** - Mathematical guarantees of system properties
-- **Human-in-the-Loop** - Critical decisions involve human oversight
-- **Quantum Resistance** - Forward-looking cryptographic foundations
+- **Never Trust, Always Verify** â€“ Implicit governance through continuous verification
+- **Geometric Proofs** â€“ Mathematical guarantees of system properties
+- **Human-in-the-Loop** â€“ Critical decisions involve human oversight
+- **Quantum Resistance** â€“ Forward-looking cryptographic foundations
 
 ---
 
-## ?? Examples
+## ğŸ§ª Examples
 
 ### 1. Thread-Safe Counter (Gosilang)
 ```gosilang
@@ -186,13 +186,13 @@ actor ZKPAuthenticator {
 
 ---
 
-## ?? Research & Formal Verification
+## ğŸ”¬ Research & Formal Verification
 
 The repository includes formal proofs and models:
 
-- **Coq Formalizations** (`.mrift/Th/`) - Mathematical proofs of system properties
-- **BNF Grammars** (`Tomographic.bnf`) - Formal language definitions
-- **Policy Specifications** (`.mrift/policies.mrift`) - Governance policy definitions
+- **Coq Formalizations** (`.mrift/Th/`) â€“ Mathematical proofs of system properties
+- **BNF Grammars** (`Tomographic.bnf`) â€“ Formal language definitions
+- **Policy Specifications** (`.mrift/policies.mrift`) â€“ Governance policy definitions
 
 To verify formal proofs:
 ```bash
@@ -203,25 +203,25 @@ coqc EventSourcing.coq
 
 ---
 
-## ?? Contributing
+## ğŸ¤ Contributing
 
 We welcome contributions in:
-- **Formal Verification** - Extending Coq proofs
-- **Gosilang Implementations** - New thread-safe patterns
-- **Documentation** - Improving clarity and examples
-- **Governance Policies** - New Rift policy definitions
+- **Formal Verification** â€“ Extending Coq proofs
+- **Gosilang Implementations** â€“ New thread-safe patterns
+- **Documentation** â€“ Improving clarity and examples
+- **Governance Policies** â€“ New Rift policy definitions
 
 Please read our contributing guidelines (to be added) and open issues for discussion.
 
 ---
 
-## ?? License
+## ğŸ“„ License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** â€“ see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ?? Contact
+## ğŸ“ Contact
 
 - **Organization**: OBINexus Computing
 - **Author**: Nnamdi Michael Okpala
@@ -231,7 +231,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## ?? Project Status
+## ğŸ¯ Project Status
 
 **Research & Development Phase**
 
